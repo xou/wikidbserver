@@ -13,6 +13,7 @@ below).
   dbpedia (see "Data input" below).
 - Build using "make". Requires boost, libbz2 and a C++11 capable compiler.
 - Launch using `./wikidbserver --labels <labels.bz2> [--links <links.bz2>] [--inlinks]`
+- Tests can be found in the ./test/ subdirectory, run them with `make test`. Requires googletest and googlemock.
 
 ## Command set
 

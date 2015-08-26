@@ -216,6 +216,8 @@ public:
     check_articleid_linkdb(root);
     Pagelink other_pl = to_pagelink(other);
     auto it = lower_bound(links[root].begin(), links[root].end(), other_pl);
+    if (it == links[root].end())
+      return false;
     return (is_link_to_article(*it, other) && is_outgoing(*it));
   }
 };

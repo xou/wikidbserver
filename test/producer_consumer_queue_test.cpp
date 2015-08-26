@@ -2,7 +2,7 @@
 #include <thread>
 #include <chrono>
 #include <string>
-#include "producer_consumer_queue.hpp"
+#include "../producer_consumer_queue.hpp"
 
 using namespace std;
 
@@ -10,7 +10,7 @@ ProducerConsumerQueue<string> q(10);
 
 void consumerThread(int id) {
   while (true) {
-    this_thread::sleep_for( chrono::seconds(1) );
+    this_thread::sleep_for( chrono::milliseconds(10) );
     string out;
     cout << "consumerThread(" << id << ") waking up" << endl;
     if (!q.pop(out)) {
